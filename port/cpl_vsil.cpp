@@ -1900,6 +1900,7 @@ VSILFILE *VSIFOpenEx2L(const char *pszFilename, const char *pszAccess,
     // Too long filenames can cause excessive memory allocation due to
     // recursion in some filesystem handlers
     constexpr size_t knMaxPath = 8192;
+    fprintf(stderr,"%s:%s() line %d: here\n",__FILE__,__FUNCTION__,__LINE__);
     if (CPLStrnlen(pszFilename, knMaxPath) == knMaxPath)
         return nullptr;
 
@@ -1907,6 +1908,7 @@ VSILFILE *VSIFOpenEx2L(const char *pszFilename, const char *pszAccess,
 
     VSILFILE *fp = poFSHandler->Open(pszFilename, pszAccess,
                                      CPL_TO_BOOL(bSetError), papszOptions);
+    fprintf(stderr,"%s:%s() line %d: opening vsi file %s with handler %s\n",__FILE__,__FUNCTION__,__LINE__,pszFilename,poFSHandler->GetDescription());
 
     VSIDebug4("VSIFOpenEx2L(%s,%s,%d) = %p", pszFilename, pszAccess, bSetError,
               fp);
@@ -3090,8 +3092,10 @@ VSIFileManager *VSIFileManager::Get()
 #ifdef HAVE_LIBZ
     VSIInstallGZipFileHandler();
     VSIInstallZipFileHandler();
+    fprintf(stderr,"%s:%s() line %d, installing GZIP and YZ\n",__FILE__,__FUNCTION__,__LINE__);
 #endif
 #ifdef HAVE_LIBARCHIVE
+    fprintf(stderr,"%s:%s() line %d, installing 7z and RarFileHandlers\n",__FILE__,__FUNCTION__,__LINE__);
     VSIInstall7zFileHandler();
     VSIInstallRarFileHandler();
 #endif

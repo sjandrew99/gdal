@@ -367,6 +367,10 @@ class VSIGZipFilesystemHandler final : public VSIFilesystemHandler
     char **ReadDirEx(const char *pszDirname, int nMaxFiles) override;
 
     const char *GetOptions() override;
+    char * GetDescription() override
+    {
+        return "GZIP";
+    }
 
     virtual bool SupportsSequentialWrite(const char *pszPath,
                                          bool bAllowLocalTempFile) override;

@@ -939,6 +939,7 @@ GDALDataset *EHdrDataset::Open(GDALOpenInfo *poOpenInfo, bool bFileSizeCheck)
 
 {
     // Assume the caller is pointing to the binary (i.e. .bil) file.
+    fprintf(stderr,"%s:%s() line %d: headerBytes: %d, fpL==nullptr: %d\n",__FILE__,__FUNCTION__,__LINE__,poOpenInfo->nHeaderBytes,(poOpenInfo->fpL == nullptr));
     if (poOpenInfo->nHeaderBytes < 2 || poOpenInfo->fpL == nullptr)
         return nullptr;
 

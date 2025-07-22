@@ -282,6 +282,10 @@ class CPL_DLL VSIFilesystemHandler
     {
         return true;
     }
+    virtual char * GetDescription()
+    {
+        return "Undescribed";
+    }
 
     virtual VSIFilesystemHandler *Duplicate(const char * /* pszPrefix */)
     {
@@ -422,6 +426,10 @@ class VSIArchiveFilesystemHandler : public VSIFilesystemHandler
                                      bool /* bAllowLocalTempFile */) override
     {
         return false;
+    }
+    char * GetDescription() override
+    {
+        return "ARCHIVE";
     }
 };
 
