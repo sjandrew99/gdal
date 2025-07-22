@@ -287,7 +287,6 @@ class CPL_DLL VSIFilesystemHandler
         const char * _desc = "UNDESCRIBED";
         return _desc;
     }
-
     virtual VSIFilesystemHandler *Duplicate(const char * /* pszPrefix */)
     {
         CPLError(CE_Failure, CPLE_NotSupported,
@@ -430,7 +429,7 @@ class VSIArchiveFilesystemHandler : public VSIFilesystemHandler
     }
     const char * GetDescription() override
     {
-        const char * _desc = "ARCHIVE";
+        const char * _desc = "UNDESCRIBED_ARCHIVE";
         return _desc;
     }
 };

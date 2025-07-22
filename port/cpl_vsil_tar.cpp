@@ -532,6 +532,12 @@ class VSITarFilesystemHandler final : public VSIArchiveFilesystemHandler
     {
         return "/vsitar";
     }
+    const char * GetDescription() override
+    {
+        const char * _desc = "TAR";
+        return _desc;
+    }
+
     std::vector<CPLString> GetExtensions() override;
     VSIArchiveReader *CreateReader(const char *pszTarFileName) override;
 

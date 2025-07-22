@@ -3490,6 +3490,13 @@ class VSIZipFilesystemHandler final : public VSIArchiveFilesystemHandler
     {
         return "/vsizip";
     }
+    
+    const char * GetDescription() override
+    {
+        const char * _desc = "ZIPFILE";
+        return _desc;
+    }
+
     std::vector<CPLString> GetExtensions() override;
     VSIArchiveReader *CreateReader(const char *pszZipFileName) override;
 

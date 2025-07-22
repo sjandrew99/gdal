@@ -3092,14 +3092,15 @@ VSIFileManager *VSIFileManager::Get()
 #ifdef HAVE_LIBZ
     VSIInstallGZipFileHandler();
     VSIInstallZipFileHandler();
-    fprintf(stdout,"%s:%s() line %d, installing GZIP and YZ\n",__FILE__,__FUNCTION__,__LINE__);
+    fprintf(stdout,"%s:%s() line %d, installing GZIP and Zip file handlers\n",__FILE__,__FUNCTION__,__LINE__);
 #endif
 #ifdef HAVE_LIBARCHIVE
-    fprintf(stdout,"%s:%s() line %d, installing 7z and RarFileHandlers\n",__FILE__,__FUNCTION__,__LINE__);
+    fprintf(stdout,"%s:%s() line %d, installing 7z and Rar filehandlers\n",__FILE__,__FUNCTION__,__LINE__);
     VSIInstall7zFileHandler();
     VSIInstallRarFileHandler();
 #endif
 #ifdef HAVE_CURL
+   fprintf(stdout,"%s:%s() line %d, installing curl filehandlers\n",__FILE__,__FUNCTION__,__LINE__);
     VSIInstallCurlFileHandler();
     VSIInstallCurlStreamingFileHandler();
     VSIInstallS3FileHandler();
