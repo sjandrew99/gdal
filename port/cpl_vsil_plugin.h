@@ -76,6 +76,12 @@ class VSIPluginFilesystemHandler : public VSIFilesystemHandler
     int Close(void *pFile);
 
   public:
+      const char * GetDescription() override
+    {
+        const char * _desc = "PLUGIN";
+        return _desc;
+    }
+
     VSIPluginFilesystemHandler(const char *pszPrefix,
                                const VSIFilesystemPluginCallbacksStruct *cb);
     ~VSIPluginFilesystemHandler() override;

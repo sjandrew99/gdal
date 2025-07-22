@@ -92,6 +92,12 @@ class VSIStdinFilesystemHandler final : public VSIFilesystemHandler
     CPL_DISALLOW_COPY_ASSIGN(VSIStdinFilesystemHandler)
 
   public:
+      const char * GetDescription() override
+    {
+        const char * _desc = "STDIN";
+        return _desc;
+    }
+
     VSIStdinFilesystemHandler();
     ~VSIStdinFilesystemHandler() override;
 

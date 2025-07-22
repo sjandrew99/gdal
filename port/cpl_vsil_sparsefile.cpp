@@ -109,6 +109,12 @@ class VSISparseFileFilesystemHandler : public VSIFilesystemHandler
     CPL_DISALLOW_COPY_ASSIGN(VSISparseFileFilesystemHandler)
 
   public:
+     const char * GetDescription() override
+    {
+        const char * _desc = "SPARSE_FILE";
+        return _desc;
+    }
+
     VSISparseFileFilesystemHandler() = default;
     ~VSISparseFileFilesystemHandler() override = default;
 

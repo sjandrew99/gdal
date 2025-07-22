@@ -162,6 +162,12 @@ class VSICurlHandle;
 class VSICurlFilesystemHandlerBase : public VSIFilesystemHandler
 {
     CPL_DISALLOW_COPY_ASSIGN(VSICurlFilesystemHandlerBase)
+    const char * GetDescription() override
+    {
+        const char * _desc = "CURL";
+        return _desc;
+    }
+
 
     struct FilenameOffsetPair
     {

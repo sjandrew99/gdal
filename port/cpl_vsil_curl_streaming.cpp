@@ -206,6 +206,12 @@ class VSICurlStreamingHandle;
 class VSICurlStreamingFSHandler : public VSIFilesystemHandler
 {
     CPL_DISALLOW_COPY_ASSIGN(VSICurlStreamingFSHandler)
+    const char * GetDescription() override
+    {
+        const char * _desc = "CURL_STREAMING";
+        return _desc;
+    }
+
 
     // LRU cache that just keeps in memory if this file system handler is
     // spposed to know the file properties of a file. The actual cache is a

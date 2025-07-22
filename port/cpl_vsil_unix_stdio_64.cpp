@@ -165,6 +165,12 @@ class VSIUnixStdioFilesystemHandler final : public VSIFilesystemHandler
 
   public:
     VSIUnixStdioFilesystemHandler() = default;
+        const char * GetDescription() override
+    {
+        const char * _desc = "UNIX_STDIO";
+        return _desc;
+    }
+
 #ifdef VSI_COUNT_BYTES_READ
     ~VSIUnixStdioFilesystemHandler() override;
 #endif

@@ -1461,6 +1461,12 @@ class VSICryptFilesystemHandler final : public VSIFilesystemHandler
     int Unlink(const char *pszFilename) override;
     int Rename(const char *oldpath, const char *newpath) override;
     char **ReadDirEx(const char *pszDirname, int nMaxFiles) override;
+    const char * GetDescription() override
+    {
+        const char * _desc = "CRYPT";
+        return _desc;
+    }
+
 };
 
 /************************************************************************/
@@ -2107,6 +2113,12 @@ class VSIDummyCryptFilesystemHandler : public VSIFilesystemHandler
                  "%s support not available in this build", VSICRYPT_PREFIX);
         return -1;
     }
+    const char * GetDescription() override
+    {
+        const char * _desc = "DUMMY_CRYPT";
+        return _desc;
+    }
+
 };
 
 void VSIInstallCryptFileHandler(void)

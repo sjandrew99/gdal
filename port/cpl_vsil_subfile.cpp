@@ -97,6 +97,12 @@ class VSISubFileFilesystemHandler final : public VSIFilesystemHandler
     int Mkdir(const char *pszDirname, long nMode) override;
     int Rmdir(const char *pszDirname) override;
     char **ReadDir(const char *pszDirname) override;
+    const char * GetDescription() override
+    {
+        const char * _desc = "SUBFILE";
+        return _desc;
+    }
+
 };
 
 /************************************************************************/

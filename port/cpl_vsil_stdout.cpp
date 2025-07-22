@@ -78,6 +78,12 @@ class VSIStdoutFilesystemHandler final : public VSIFilesystemHandler
     CPL_DISALLOW_COPY_ASSIGN(VSIStdoutFilesystemHandler)
 
   public:
+    const char * GetDescription() override
+    {
+        const char * _desc = "STDOUT";
+        return _desc;
+    }
+
     VSIStdoutFilesystemHandler() = default;
 
     VSIVirtualHandle *Open(const char *pszFilename, const char *pszAccess,
@@ -249,6 +255,12 @@ int VSIStdoutFilesystemHandler::Stat(const char * /* pszFilename */,
 class VSIStdoutRedirectFilesystemHandler final : public VSIFilesystemHandler
 {
   public:
+     const char * GetDescription() override
+    {
+        const char * _desc = "STDOUT_REDIRECT";
+        return _desc;
+    }
+
     VSIVirtualHandle *Open(const char *pszFilename, const char *pszAccess,
                            bool bSetError,
                            CSLConstList /* papszOptions */) override;

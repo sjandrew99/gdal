@@ -160,6 +160,12 @@ class VSIMemFilesystemHandler final : public VSIFilesystemHandler
     CPL_DISALLOW_COPY_ASSIGN(VSIMemFilesystemHandler)
 
   public:
+    const char * GetDescription() override
+    {
+        const char * _desc = "MEM";
+        return _desc;
+    }
+
     std::map<CPLString, std::shared_ptr<VSIMemFile>> oFileList{};
     CPLMutex *hMutex = nullptr;
 

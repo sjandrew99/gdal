@@ -284,7 +284,7 @@ class CPL_DLL VSIFilesystemHandler
     }
     virtual const char * GetDescription()
     {
-        const char * _desc = "Undescribed";
+        const char * _desc = "UNDESCRIBED";
         return _desc;
     }
 
