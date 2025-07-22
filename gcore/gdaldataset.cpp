@@ -3268,7 +3268,7 @@ GDALDatasetH CPL_STDCALL GDALOpen(const char *pszFilename, GDALAccess eAccess)
 {
     const int nUpdateFlag = eAccess == GA_Update ? GDAL_OF_UPDATE : 0;
     const int nOpenFlags = GDAL_OF_RASTER | nUpdateFlag | GDAL_OF_VERBOSE_ERROR;
-    fprintf(stderr,"%s:%s() line %d\n",__FILE__,__FUNCTION__,__LINE__);
+    fprintf(stdout,"%s:%s() line %d\n",__FILE__,__FUNCTION__,__LINE__);
     GDALDatasetH hDataset =
         GDALOpenEx(pszFilename, nOpenFlags, nullptr, nullptr, nullptr);
     return hDataset;
@@ -3379,10 +3379,10 @@ GDALDatasetH CPL_STDCALL GDALOpenEx(const char *pszFilename,
     /*      In case of shared dataset, first scan the existing list to see  */
     /*      if it could already contain the requested dataset.              */
     /* -------------------------------------------------------------------- */
-    fprintf(stderr,"%s:%s() line %d\n",__FILE__,__FUNCTION__,__LINE__);
+    fprintf(stdout,"%s:%s() line %d\n",__FILE__,__FUNCTION__,__LINE__);
     if (nOpenFlags & GDAL_OF_SHARED)
     {
-        fprintf(stderr,"%s:%s() line %d\n",__FILE__,__FUNCTION__,__LINE__);
+        fprintf(stdout,"%s:%s() line %d\n",__FILE__,__FUNCTION__,__LINE__);
         if (nOpenFlags & GDAL_OF_INTERNAL)
         {
             CPLError(CE_Failure, CPLE_IllegalArg,
@@ -3417,7 +3417,7 @@ GDALDatasetH CPL_STDCALL GDALOpenEx(const char *pszFilename,
             }
         }
     }
-    fprintf(stderr,"%s:%s() line %d\n",__FILE__,__FUNCTION__,__LINE__);
+    fprintf(stdout,"%s:%s() line %d\n",__FILE__,__FUNCTION__,__LINE__);
     // If no driver kind is specified, assume all are to be probed.
     if ((nOpenFlags & GDAL_OF_KIND_MASK) == 0)
         nOpenFlags |= GDAL_OF_KIND_MASK & ~GDAL_OF_MULTIDIM_RASTER;
@@ -3433,7 +3433,7 @@ GDALDatasetH CPL_STDCALL GDALOpenEx(const char *pszFilename,
     // shared dataset was asked before.
     GDALOpenInfo oOpenInfo(pszFilename, nOpenFlags,
                            const_cast<char **>(papszSiblingFiles));
-    fprintf(stderr,"%s:%s() line %d: headerBytes: %d, fpL==nullptr: %d\n",__FILE__,__FUNCTION__,__LINE__,oOpenInfo.nHeaderBytes,(oOpenInfo.fpL == nullptr));
+    fprintf(stdout,"%s:%s() line %d: headerBytes: %d, fpL==nullptr: %d\n",__FILE__,__FUNCTION__,__LINE__,oOpenInfo.nHeaderBytes,(oOpenInfo.fpL == nullptr));
     oOpenInfo.papszAllowedDrivers = papszAllowedDrivers;
 
     GDALAntiRecursionStruct &sAntiRecursion = GetAntiRecursion();
@@ -3485,7 +3485,7 @@ GDALDatasetH CPL_STDCALL GDALOpenEx(const char *pszFilename,
         
         GDALDriver *poDriver = poDM->GetDriver(iDriver);
         int verbose = !strcmp(poDriver->GetDescription(), "EHdr");
-        if (verbose) fprintf(stderr,"%s:%s() line %d - attempting to open using driver %s\n",__FILE__,__FUNCTION__,__LINE__,poDriver->GetDescription());
+        if (verbose) fprintf(stdout,"%s:%s() line %d - attempting to open using driver %s\n",__FILE__,__FUNCTION__,__LINE__,poDriver->GetDescription());
         if (papszAllowedDrivers != nullptr &&
             CSLFindString(papszAllowedDrivers,
                           GDALGetDriverShortName(poDriver)) == -1)
@@ -3552,10 +3552,10 @@ GDALDatasetH CPL_STDCALL GDALOpenEx(const char *pszFilename,
         sAntiRecursion.aosDatasetNamesWithFlags.insert(dsCtxt);
 
         GDALDataset *poDS = nullptr;
-        if (verbose) fprintf(stderr,"%s:%s() line %d - HERE\n",__FILE__,__FUNCTION__,__LINE__);
+        if (verbose) fprintf(stdout,"%s:%s() line %d - HERE\n",__FILE__,__FUNCTION__,__LINE__);
         if (poDriver->pfnOpen != nullptr)
         {
-            if (verbose) fprintf(stderr,"%s:%s() line %d - HERE\n",__FILE__,__FUNCTION__,__LINE__);
+            if (verbose) fprintf(stdout,"%s:%s() line %d - HERE\n",__FILE__,__FUNCTION__,__LINE__);
             poDS = poDriver->pfnOpen(&oOpenInfo);
             // If we couldn't determine for sure with Identify() (it returned
             // -1), but Open() managed to open the file, post validate options.
@@ -3568,7 +3568,7 @@ GDALDatasetH CPL_STDCALL GDALOpenEx(const char *pszFilename,
         }
         else if (poDriver->pfnOpenWithDriverArg != nullptr)
         {
-            fprintf(stderr,"%s:%s() line %d - HERE\n",__FILE__,__FUNCTION__,__LINE__);
+            fprintf(stdout,"%s:%s() line %d - HERE\n",__FILE__,__FUNCTION__,__LINE__);
             poDS = poDriver->pfnOpenWithDriverArg(poDriver, &oOpenInfo);
         }
 
@@ -3578,7 +3578,7 @@ GDALDatasetH CPL_STDCALL GDALOpenEx(const char *pszFilename,
         CSLDestroy(papszTmpOpenOptions);
         CSLDestroy(papszTmpOpenOptionsToValidate);
         oOpenInfo.papszOpenOptions = papszOpenOptionsCleaned;
-        if (verbose) fprintf(stderr,"%s:%s() line %d - HERE\n",__FILE__,__FUNCTION__,__LINE__);
+        if (verbose) fprintf(stdout,"%s:%s() line %d - HERE\n",__FILE__,__FUNCTION__,__LINE__);
         if (poDS != nullptr)
         {
             poDS->nOpenFlags = nOpenFlags;

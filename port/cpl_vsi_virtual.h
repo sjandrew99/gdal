@@ -282,9 +282,10 @@ class CPL_DLL VSIFilesystemHandler
     {
         return true;
     }
-    virtual char * GetDescription()
+    virtual const char * GetDescription()
     {
-        return "Undescribed";
+        const char * _desc = "Undescribed";
+        return _desc;
     }
 
     virtual VSIFilesystemHandler *Duplicate(const char * /* pszPrefix */)
@@ -427,9 +428,10 @@ class VSIArchiveFilesystemHandler : public VSIFilesystemHandler
     {
         return false;
     }
-    char * GetDescription() override
+    const char * GetDescription() override
     {
-        return "ARCHIVE";
+        const char * _desc = "ARCHIVE";
+        return _desc;
     }
 };
 

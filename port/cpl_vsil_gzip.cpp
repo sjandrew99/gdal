@@ -367,7 +367,7 @@ class VSIGZipFilesystemHandler final : public VSIFilesystemHandler
     char **ReadDirEx(const char *pszDirname, int nMaxFiles) override;
 
     const char *GetOptions() override;
-    char * GetDescription() override
+    const char * GetDescription() override
     {
         return "GZIP";
     }

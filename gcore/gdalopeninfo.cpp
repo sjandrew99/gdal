@@ -222,7 +222,7 @@ retry:  // TODO(schwehr): Stop using goto.
         STARTS_WITH(pszFilename, "/vsirar/"))
     {
         const char *pszExt = CPLGetExtension(pszFilename);
-        fprintf(stderr,"%s:%s() line %d: pszExt = %s\n",__FILE__,__FUNCTION__,__LINE__,pszExt);
+        fprintf(stdout,"%s:%s() line %d: pszExt = %s\n",__FILE__,__FUNCTION__,__LINE__,pszExt);
         if (EQUAL(pszExt, "zip") || EQUAL(pszExt, "tar") ||
             EQUAL(pszExt, "gz") || EQUAL(pszExt, "7z") ||
             EQUAL(pszExt, "rar") ||
@@ -258,7 +258,7 @@ retry:  // TODO(schwehr): Stop using goto.
             if (VSI_ISDIR(sStat.st_mode))
                 bIsDirectory = TRUE;
         }
-        fprintf(stderr,"%s:%s() line %d: bIsDirectory=%d\n",__FILE__,__FUNCTION__,__LINE__,bIsDirectory);
+        fprintf(stdout,"%s:%s() line %d: bIsDirectory=%d\n",__FILE__,__FUNCTION__,__LINE__,bIsDirectory);
     }
 
     pabyHeader = GDALOpenInfoGetFileNotToOpen(pszFilename, &nHeaderBytes);
@@ -267,9 +267,9 @@ retry:  // TODO(schwehr): Stop using goto.
     {
         fpL = VSIFOpenExL(pszFilename, (eAccess == GA_Update) ? "r+b" : "rb",
                           (nOpenFlagsIn & GDAL_OF_VERBOSE_ERROR) > 0);
-        fprintf(stderr,"%s:%s() line %d: fpL is null? %d\n",__FILE__,__FUNCTION__,__LINE__,(fpL == nullptr));
+        fprintf(stdout,"%s:%s() line %d: fpL is null? %d\n",__FILE__,__FUNCTION__,__LINE__,(fpL == nullptr));
     }
-    fprintf(stderr,"%s:%s() line %d: pabyHeader is null? %d\n",__FILE__,__FUNCTION__,__LINE__,(pabyHeader == nullptr));
+    fprintf(stdout,"%s:%s() line %d: pabyHeader is null? %d\n",__FILE__,__FUNCTION__,__LINE__,(pabyHeader == nullptr));
     if (pabyHeader)
     {
         bStatOK = TRUE;
