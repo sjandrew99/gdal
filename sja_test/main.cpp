@@ -29,6 +29,7 @@ int main(int argc, char ** argv)
     //GDALDatasetUniquePtr dataset;
     //dataset = GDALDatasetUniquePtr(GDALDataset::FromHandle(GDALOpen(argv[1],GA_ReadOnly)));
     
-    fprintf(stdout,"successfully opened %s using driver: %s\n", argv[1],dataset->GetDriver()->GetDescription());
+    if (dataset != NULL)
+        fprintf(stdout,"successfully opened %s using driver: %s\n", argv[1],dataset->GetDriver()->GetDescription());
     
 }

@@ -3268,7 +3268,7 @@ GDALDatasetH CPL_STDCALL GDALOpen(const char *pszFilename, GDALAccess eAccess)
 {
     const int nUpdateFlag = eAccess == GA_Update ? GDAL_OF_UPDATE : 0;
     const int nOpenFlags = GDAL_OF_RASTER | nUpdateFlag | GDAL_OF_VERBOSE_ERROR;
-    fprintf(stdout,"%s:%s() line %d\n",__FILE__,__FUNCTION__,__LINE__);
+    fprintf(stdout,"%s:%s() line %d: %s, nOpenFlags = %d\n",__FILE__,__FUNCTION__,__LINE__,pszFilename,nOpenFlags);
     GDALDatasetH hDataset =
         GDALOpenEx(pszFilename, nOpenFlags, nullptr, nullptr, nullptr);
     return hDataset;
@@ -3379,7 +3379,7 @@ GDALDatasetH CPL_STDCALL GDALOpenEx(const char *pszFilename,
     /*      In case of shared dataset, first scan the existing list to see  */
     /*      if it could already contain the requested dataset.              */
     /* -------------------------------------------------------------------- */
-    fprintf(stdout,"%s:%s() line %d\n",__FILE__,__FUNCTION__,__LINE__);
+    fprintf(stdout,"%s:%s() line %d - %s\n",__FILE__,__FUNCTION__,__LINE__,pszFilename);
     if (nOpenFlags & GDAL_OF_SHARED)
     {
         fprintf(stdout,"%s:%s() line %d\n",__FILE__,__FUNCTION__,__LINE__);

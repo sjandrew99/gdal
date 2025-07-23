@@ -1900,7 +1900,7 @@ VSILFILE *VSIFOpenEx2L(const char *pszFilename, const char *pszAccess,
     // Too long filenames can cause excessive memory allocation due to
     // recursion in some filesystem handlers
     constexpr size_t knMaxPath = 8192;
-    fprintf(stdout,"%s:%s() line %d: here\n",__FILE__,__FUNCTION__,__LINE__);
+    fprintf(stdout,"%s:%s() line %d: attempting to open %s\n",__FILE__,__FUNCTION__,__LINE__,pszFilename);
     if (CPLStrnlen(pszFilename, knMaxPath) == knMaxPath)
         return nullptr;
 
