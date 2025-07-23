@@ -3976,7 +3976,7 @@ bool VSIZipFilesystemHandler::GetFileInfo(const char *pszFilename,
             return false;
         }
     }
-
+    fprintf(stdout,"%s:%s() line %d: opening archive file %s\n",__FILE__,__FUNCTION__,__LINE__,zipFilename);
     VSIArchiveReader *poReader = OpenArchiveFile(zipFilename, osZipInFileName);
     if (poReader == nullptr)
     {
@@ -3985,6 +3985,7 @@ bool VSIZipFilesystemHandler::GetFileInfo(const char *pszFilename,
     }
 
     VSIFilesystemHandler *poFSHandler = VSIFileManager::GetHandler(zipFilename);
+    fprintf(stdout,"%s:%s() line %d: using handler %s for archive file\n",__FILE__,__FUNCTION__,__LINE__,poFSHandler->GetDescription());
 
     VSIVirtualHandle *poVirtualHandle = poFSHandler->Open(zipFilename, "rb");
 
@@ -4215,6 +4216,7 @@ VSIVirtualHandle *VSIZipFilesystemHandler::Open(const char *pszFilename,
                                                 CSLConstList /* papszOptions */)
 {
 
+    fprintf(stdout,"%s:%s() line %d: opening %s with %s access\n",__FILE__,__FUNCTION__,__LINE__,pszFilename,pszAccess);
     if (strchr(pszAccess, 'w') != nullptr)
     {
         return OpenForWrite(pszFilename, pszAccess);
@@ -4232,8 +4234,10 @@ VSIVirtualHandle *VSIZipFilesystemHandler::Open(const char *pszFilename,
         return nullptr;
 
 #ifdef ENABLE_DEFLATE64
+    fprintf(stdout,"%s:%s() line %d: HERE\n",__FILE__,__FUNCTION__,__LINE__);
     if (info.nCompressionMethod == 9)
     {
+        fprintf(stdout,"%s:%s() line %d: HERE\n",__FILE__,__FUNCTION__,__LINE__);
         auto poGZIPHandle = new VSIDeflate64Handle(
             info.poVirtualHandle.release(), nullptr, info.nStartDataStream,
             info.nCompressedSize, info.nUncompressedSize, info.nCRC);
@@ -4251,8 +4255,10 @@ VSIVirtualHandle *VSIZipFilesystemHandler::Open(const char *pszFilename,
     else
 #endif
     {
+        fprintf(stdout,"%s:%s() line %d: HERE\n",__FILE__,__FUNCTION__,__LINE__);
         if (info.bSOZipIndexValid)
         {
+            fprintf(stdout,"%s:%s() line %d: HERE\n",__FILE__,__FUNCTION__,__LINE__);
             auto poSOZIPHandle = new VSISOZipHandle(
                 info.poVirtualHandle.release(), info.nStartDataStream,
                 info.nCompressedSize, info.nUncompressedSize,
@@ -4262,9 +4268,10 @@ VSIVirtualHandle *VSIZipFilesystemHandler::Open(const char *pszFilename,
                 delete poSOZIPHandle;
                 return nullptr;
             }
+            fprintf(stdout,"%s:%s() line %d: HERE\n",__FILE__,__FUNCTION__,__LINE__);
             return VSICreateCachedFile(poSOZIPHandle, info.nSOZIPChunkSize, 0);
         }
-
+        fprintf(stdout,"%s:%s() line %d: HERE\n",__FILE__,__FUNCTION__,__LINE__);
         VSIGZipHandle *poGZIPHandle = new VSIGZipHandle(
             info.poVirtualHandle.release(), nullptr, info.nStartDataStream,
             info.nCompressedSize, info.nUncompressedSize, info.nCRC,
@@ -4274,7 +4281,7 @@ VSIVirtualHandle *VSIZipFilesystemHandler::Open(const char *pszFilename,
             delete poGZIPHandle;
             return nullptr;
         }
-
+        fprintf(stdout,"%s:%s() line %d: HERE\n",__FILE__,__FUNCTION__,__LINE__);
         // Wrap the VSIGZipHandle inside a buffered reader that will
         // improve dramatically performance when doing small backward
         // seeks.

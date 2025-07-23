@@ -1908,7 +1908,7 @@ VSILFILE *VSIFOpenEx2L(const char *pszFilename, const char *pszAccess,
 
     VSILFILE *fp = poFSHandler->Open(pszFilename, pszAccess,
                                      CPL_TO_BOOL(bSetError), papszOptions);
-    fprintf(stdout,"%s:%s() line %d: opening vsi file %s with handler %s\n",__FILE__,__FUNCTION__,__LINE__,pszFilename,poFSHandler->GetDescription());
+    fprintf(stdout,"%s:%s() line %d: opened vsi file %s with handler %s\n",__FILE__,__FUNCTION__,__LINE__,pszFilename,poFSHandler->GetDescription());
 
     VSIDebug4("VSIFOpenEx2L(%s,%s,%d) = %p", pszFilename, pszAccess, bSetError,
               fp);

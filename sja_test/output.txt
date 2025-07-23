@@ -2,70 +2,124 @@ MAIN: Registering gdal drivers...
 /home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1903: attempting to open /usr/local/etc/gdal/gdalrc
 /home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:Get() line 3095, installing GZIP and Zip file handlers
 /home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:Get() line 3103, installing curl filehandlers
-/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1911: opening vsi file /usr/local/etc/gdal/gdalrc with handler UNIX_STDIO
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1911: opened vsi file /usr/local/etc/gdal/gdalrc with handler UNIX_STDIO
 /home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1903: attempting to open /home/steve/.gdal/gdalrc
-/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1911: opening vsi file /home/steve/.gdal/gdalrc with handler UNIX_STDIO
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1911: opened vsi file /home/steve/.gdal/gdalrc with handler UNIX_STDIO
 MAIN drivers registered
 /home/steve/projects/terrain/gdal/gdal/gcore/gdaldataset.cpp:GDALOpen() line 3271: /vsizip/../../../n38_w091_1arc_v3_bil.zip/n38_w091_1arc_v3.bil, nOpenFlags = 66
 /home/steve/projects/terrain/gdal/gdal/gcore/gdaldataset.cpp:GDALOpenEx() line 3382 - /vsizip/../../../n38_w091_1arc_v3_bil.zip/n38_w091_1arc_v3.bil
 /home/steve/projects/terrain/gdal/gdal/gcore/gdaldataset.cpp:GDALOpenEx() line 3420
 /home/steve/projects/terrain/gdal/gdal/gcore/gdalopeninfo.cpp:GDALOpenInfo() line 225: pszExt = bil
 /home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1903: attempting to open /vsizip/../../../n38_w091_1arc_v3_bil.zip/n38_w091_1arc_v3.bil
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil_gzip.cpp:Open() line 4219: opening /vsizip/../../../n38_w091_1arc_v3_bil.zip/n38_w091_1arc_v3.bil with rb access
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil_gzip.cpp:GetFileInfo() line 3979: opening archive file ../../../n38_w091_1arc_v3_bil.zip
 /home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1903: attempting to open ../../../n38_w091_1arc_v3_bil.zip
-/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1911: opening vsi file ../../../n38_w091_1arc_v3_bil.zip with handler UNIX_STDIO
-/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1911: opening vsi file /vsizip/../../../n38_w091_1arc_v3_bil.zip/n38_w091_1arc_v3.bil with handler ZIPFILE
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1911: opened vsi file ../../../n38_w091_1arc_v3_bil.zip with handler UNIX_STDIO
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil_gzip.cpp:GetFileInfo() line 3988: using handler UNIX_STDIO for archive file
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil_gzip.cpp:Open() line 4237: HERE
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil_gzip.cpp:Open() line 4258: HERE
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil_gzip.cpp:Open() line 4274: HERE
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil_gzip.cpp:Open() line 4284: HERE
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1911: opened vsi file /vsizip/../../../n38_w091_1arc_v3_bil.zip/n38_w091_1arc_v3.bil with handler ZIPFILE
 /home/steve/projects/terrain/gdal/gdal/gcore/gdalopeninfo.cpp:GDALOpenInfo() line 270: fpL is null? 0
 /home/steve/projects/terrain/gdal/gdal/gcore/gdalopeninfo.cpp:GDALOpenInfo() line 272: pabyHeader is null? 1
 /home/steve/projects/terrain/gdal/gdal/gcore/gdaldataset.cpp:GDALOpenEx() line 3436: headerBytes: 1024, fpL==nullptr: 0
 /home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1903: attempting to open ../../../n38_w091_1arc_v3_bil.zip
-/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1911: opening vsi file ../../../n38_w091_1arc_v3_bil.zip with handler UNIX_STDIO
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1911: opened vsi file ../../../n38_w091_1arc_v3_bil.zip with handler UNIX_STDIO
 /home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1903: attempting to open /vsizip/../../../n38_w091_1arc_v3_bil.zip/n38_w091_1arc_v3.hdr
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil_gzip.cpp:Open() line 4219: opening /vsizip/../../../n38_w091_1arc_v3_bil.zip/n38_w091_1arc_v3.hdr with r access
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil_gzip.cpp:GetFileInfo() line 3979: opening archive file ../../../n38_w091_1arc_v3_bil.zip
 /home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1903: attempting to open ../../../n38_w091_1arc_v3_bil.zip
-/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1911: opening vsi file ../../../n38_w091_1arc_v3_bil.zip with handler UNIX_STDIO
-/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1911: opening vsi file /vsizip/../../../n38_w091_1arc_v3_bil.zip/n38_w091_1arc_v3.hdr with handler ZIPFILE
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1911: opened vsi file ../../../n38_w091_1arc_v3_bil.zip with handler UNIX_STDIO
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil_gzip.cpp:GetFileInfo() line 3988: using handler UNIX_STDIO for archive file
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil_gzip.cpp:Open() line 4237: HERE
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil_gzip.cpp:Open() line 4258: HERE
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil_gzip.cpp:Open() line 4274: HERE
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil_gzip.cpp:Open() line 4284: HERE
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1911: opened vsi file /vsizip/../../../n38_w091_1arc_v3_bil.zip/n38_w091_1arc_v3.hdr with handler ZIPFILE
 /home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1903: attempting to open /vsizip/../../../n38_w091_1arc_v3_bil.zip/n38_w091_1arc_v3.hdr
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil_gzip.cpp:Open() line 4219: opening /vsizip/../../../n38_w091_1arc_v3_bil.zip/n38_w091_1arc_v3.hdr with r access
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil_gzip.cpp:GetFileInfo() line 3979: opening archive file ../../../n38_w091_1arc_v3_bil.zip
 /home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1903: attempting to open ../../../n38_w091_1arc_v3_bil.zip
-/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1911: opening vsi file ../../../n38_w091_1arc_v3_bil.zip with handler UNIX_STDIO
-/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1911: opening vsi file /vsizip/../../../n38_w091_1arc_v3_bil.zip/n38_w091_1arc_v3.hdr with handler ZIPFILE
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1911: opened vsi file ../../../n38_w091_1arc_v3_bil.zip with handler UNIX_STDIO
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil_gzip.cpp:GetFileInfo() line 3988: using handler UNIX_STDIO for archive file
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil_gzip.cpp:Open() line 4237: HERE
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil_gzip.cpp:Open() line 4258: HERE
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil_gzip.cpp:Open() line 4274: HERE
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil_gzip.cpp:Open() line 4284: HERE
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1911: opened vsi file /vsizip/../../../n38_w091_1arc_v3_bil.zip/n38_w091_1arc_v3.hdr with handler ZIPFILE
 /home/steve/projects/terrain/gdal/gdal/gcore/gdaldataset.cpp:GDALOpenEx() line 3488 - attempting to open using driver EHdr
 /home/steve/projects/terrain/gdal/gdal/gcore/gdaldataset.cpp:GDALOpenEx() line 3555 - HERE
 /home/steve/projects/terrain/gdal/gdal/gcore/gdaldataset.cpp:GDALOpenEx() line 3558 - HERE
 /home/steve/projects/terrain/gdal/gdal/frmts/raw/ehdrdataset.cpp:Open() line 942: headerBytes: 32768, fpL==nullptr: 0
 /home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1903: attempting to open /vsizip/../../../n38_w091_1arc_v3_bil.zip/n38_w091_1arc_v3.hdr
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil_gzip.cpp:Open() line 4219: opening /vsizip/../../../n38_w091_1arc_v3_bil.zip/n38_w091_1arc_v3.hdr with r access
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil_gzip.cpp:GetFileInfo() line 3979: opening archive file ../../../n38_w091_1arc_v3_bil.zip
 /home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1903: attempting to open ../../../n38_w091_1arc_v3_bil.zip
-/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1911: opening vsi file ../../../n38_w091_1arc_v3_bil.zip with handler UNIX_STDIO
-/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1911: opening vsi file /vsizip/../../../n38_w091_1arc_v3_bil.zip/n38_w091_1arc_v3.hdr with handler ZIPFILE
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1911: opened vsi file ../../../n38_w091_1arc_v3_bil.zip with handler UNIX_STDIO
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil_gzip.cpp:GetFileInfo() line 3988: using handler UNIX_STDIO for archive file
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil_gzip.cpp:Open() line 4237: HERE
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil_gzip.cpp:Open() line 4258: HERE
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil_gzip.cpp:Open() line 4274: HERE
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil_gzip.cpp:Open() line 4284: HERE
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1911: opened vsi file /vsizip/../../../n38_w091_1arc_v3_bil.zip/n38_w091_1arc_v3.hdr with handler ZIPFILE
 /home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1903: attempting to open /vsizip/../../../n38_w091_1arc_v3_bil.zip/n38_w091_1arc_v3.prj
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil_gzip.cpp:Open() line 4219: opening /vsizip/../../../n38_w091_1arc_v3_bil.zip/n38_w091_1arc_v3.prj with r access
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil_gzip.cpp:GetFileInfo() line 3979: opening archive file ../../../n38_w091_1arc_v3_bil.zip
 /home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1903: attempting to open ../../../n38_w091_1arc_v3_bil.zip
-/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1911: opening vsi file ../../../n38_w091_1arc_v3_bil.zip with handler UNIX_STDIO
-/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1911: opening vsi file /vsizip/../../../n38_w091_1arc_v3_bil.zip/n38_w091_1arc_v3.prj with handler ZIPFILE
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1911: opened vsi file ../../../n38_w091_1arc_v3_bil.zip with handler UNIX_STDIO
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil_gzip.cpp:GetFileInfo() line 3988: using handler UNIX_STDIO for archive file
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil_gzip.cpp:Open() line 4237: HERE
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil_gzip.cpp:Open() line 4258: HERE
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil_gzip.cpp:Open() line 4274: HERE
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil_gzip.cpp:Open() line 4284: HERE
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1911: opened vsi file /vsizip/../../../n38_w091_1arc_v3_bil.zip/n38_w091_1arc_v3.prj with handler ZIPFILE
 /home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1903: attempting to open /vsizip/../../../n38_w091_1arc_v3_bil.zip/n38_w091_1arc_v3.prj
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil_gzip.cpp:Open() line 4219: opening /vsizip/../../../n38_w091_1arc_v3_bil.zip/n38_w091_1arc_v3.prj with rb access
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil_gzip.cpp:GetFileInfo() line 3979: opening archive file ../../../n38_w091_1arc_v3_bil.zip
 /home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1903: attempting to open ../../../n38_w091_1arc_v3_bil.zip
-/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1911: opening vsi file ../../../n38_w091_1arc_v3_bil.zip with handler UNIX_STDIO
-/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1911: opening vsi file /vsizip/../../../n38_w091_1arc_v3_bil.zip/n38_w091_1arc_v3.prj with handler ZIPFILE
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1911: opened vsi file ../../../n38_w091_1arc_v3_bil.zip with handler UNIX_STDIO
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil_gzip.cpp:GetFileInfo() line 3988: using handler UNIX_STDIO for archive file
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil_gzip.cpp:Open() line 4237: HERE
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil_gzip.cpp:Open() line 4258: HERE
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil_gzip.cpp:Open() line 4274: HERE
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil_gzip.cpp:Open() line 4284: HERE
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1911: opened vsi file /vsizip/../../../n38_w091_1arc_v3_bil.zip/n38_w091_1arc_v3.prj with handler ZIPFILE
 /home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1903: attempting to open /vsizip/../../../n38_w091_1arc_v3_bil.zip/n38_w091_1arc_v3.clr
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil_gzip.cpp:Open() line 4219: opening /vsizip/../../../n38_w091_1arc_v3_bil.zip/n38_w091_1arc_v3.clr with r access
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil_gzip.cpp:GetFileInfo() line 3979: opening archive file ../../../n38_w091_1arc_v3_bil.zip
 /home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1903: attempting to open ../../../n38_w091_1arc_v3_bil.zip
-/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1911: opening vsi file ../../../n38_w091_1arc_v3_bil.zip with handler UNIX_STDIO
-/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1911: opening vsi file /vsizip/../../../n38_w091_1arc_v3_bil.zip/n38_w091_1arc_v3.clr with handler ZIPFILE
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1911: opened vsi file ../../../n38_w091_1arc_v3_bil.zip with handler UNIX_STDIO
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1911: opened vsi file /vsizip/../../../n38_w091_1arc_v3_bil.zip/n38_w091_1arc_v3.clr with handler ZIPFILE
 /home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1903: attempting to open /vsizip/../../../n38_w091_1arc_v3_bil.zip/n38_w091_1arc_v3.stx
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil_gzip.cpp:Open() line 4219: opening /vsizip/../../../n38_w091_1arc_v3_bil.zip/n38_w091_1arc_v3.stx with rt access
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil_gzip.cpp:GetFileInfo() line 3979: opening archive file ../../../n38_w091_1arc_v3_bil.zip
 /home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1903: attempting to open ../../../n38_w091_1arc_v3_bil.zip
-/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1911: opening vsi file ../../../n38_w091_1arc_v3_bil.zip with handler UNIX_STDIO
-/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1911: opening vsi file /vsizip/../../../n38_w091_1arc_v3_bil.zip/n38_w091_1arc_v3.stx with handler ZIPFILE
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1911: opened vsi file ../../../n38_w091_1arc_v3_bil.zip with handler UNIX_STDIO
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1911: opened vsi file /vsizip/../../../n38_w091_1arc_v3_bil.zip/n38_w091_1arc_v3.stx with handler ZIPFILE
 /home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1903: attempting to open /vsizip/../../../n38_w091_1arc_v3_bil.zip/n38_w091_1arc_v3.aux
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil_gzip.cpp:Open() line 4219: opening /vsizip/../../../n38_w091_1arc_v3_bil.zip/n38_w091_1arc_v3.aux with rb access
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil_gzip.cpp:GetFileInfo() line 3979: opening archive file ../../../n38_w091_1arc_v3_bil.zip
 /home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1903: attempting to open ../../../n38_w091_1arc_v3_bil.zip
-/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1911: opening vsi file ../../../n38_w091_1arc_v3_bil.zip with handler UNIX_STDIO
-/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1911: opening vsi file /vsizip/../../../n38_w091_1arc_v3_bil.zip/n38_w091_1arc_v3.aux with handler ZIPFILE
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1911: opened vsi file ../../../n38_w091_1arc_v3_bil.zip with handler UNIX_STDIO
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1911: opened vsi file /vsizip/../../../n38_w091_1arc_v3_bil.zip/n38_w091_1arc_v3.aux with handler ZIPFILE
 /home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1903: attempting to open /vsizip/../../../n38_w091_1arc_v3_bil.zip/n38_w091_1arc_v3.AUX
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil_gzip.cpp:Open() line 4219: opening /vsizip/../../../n38_w091_1arc_v3_bil.zip/n38_w091_1arc_v3.AUX with rb access
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil_gzip.cpp:GetFileInfo() line 3979: opening archive file ../../../n38_w091_1arc_v3_bil.zip
 /home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1903: attempting to open ../../../n38_w091_1arc_v3_bil.zip
-/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1911: opening vsi file ../../../n38_w091_1arc_v3_bil.zip with handler UNIX_STDIO
-/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1911: opening vsi file /vsizip/../../../n38_w091_1arc_v3_bil.zip/n38_w091_1arc_v3.AUX with handler ZIPFILE
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1911: opened vsi file ../../../n38_w091_1arc_v3_bil.zip with handler UNIX_STDIO
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1911: opened vsi file /vsizip/../../../n38_w091_1arc_v3_bil.zip/n38_w091_1arc_v3.AUX with handler ZIPFILE
 /home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1903: attempting to open /vsizip/../../../n38_w091_1arc_v3_bil.zip/n38_w091_1arc_v3.bil.aux
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil_gzip.cpp:Open() line 4219: opening /vsizip/../../../n38_w091_1arc_v3_bil.zip/n38_w091_1arc_v3.bil.aux with rb access
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil_gzip.cpp:GetFileInfo() line 3979: opening archive file ../../../n38_w091_1arc_v3_bil.zip
 /home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1903: attempting to open ../../../n38_w091_1arc_v3_bil.zip
-/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1911: opening vsi file ../../../n38_w091_1arc_v3_bil.zip with handler UNIX_STDIO
-/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1911: opening vsi file /vsizip/../../../n38_w091_1arc_v3_bil.zip/n38_w091_1arc_v3.bil.aux with handler ZIPFILE
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1911: opened vsi file ../../../n38_w091_1arc_v3_bil.zip with handler UNIX_STDIO
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1911: opened vsi file /vsizip/../../../n38_w091_1arc_v3_bil.zip/n38_w091_1arc_v3.bil.aux with handler ZIPFILE
 /home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1903: attempting to open /vsizip/../../../n38_w091_1arc_v3_bil.zip/n38_w091_1arc_v3.bil.AUX
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil_gzip.cpp:Open() line 4219: opening /vsizip/../../../n38_w091_1arc_v3_bil.zip/n38_w091_1arc_v3.bil.AUX with rb access
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil_gzip.cpp:GetFileInfo() line 3979: opening archive file ../../../n38_w091_1arc_v3_bil.zip
 /home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1903: attempting to open ../../../n38_w091_1arc_v3_bil.zip
-/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1911: opening vsi file ../../../n38_w091_1arc_v3_bil.zip with handler UNIX_STDIO
-/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1911: opening vsi file /vsizip/../../../n38_w091_1arc_v3_bil.zip/n38_w091_1arc_v3.bil.AUX with handler ZIPFILE
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1911: opened vsi file ../../../n38_w091_1arc_v3_bil.zip with handler UNIX_STDIO
+/home/steve/projects/terrain/gdal/gdal/port/cpl_vsil.cpp:VSIFOpenEx2L() line 1911: opened vsi file /vsizip/../../../n38_w091_1arc_v3_bil.zip/n38_w091_1arc_v3.bil.AUX with handler ZIPFILE
 /home/steve/projects/terrain/gdal/gdal/gcore/gdaldataset.cpp:GDALOpenEx() line 3581 - HERE
 successfully opened /vsizip/../../../n38_w091_1arc_v3_bil.zip/n38_w091_1arc_v3.bil using driver: EHdr
